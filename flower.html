@@ -9,42 +9,46 @@
   <link rel="icon" href="img/flowers.png" type="image/x-icon" />
   <title>flowers</title>
   <style>
+    /* Styling untuk button */
     .button-1 {
-      z-index: 1000;
-      background-color: #EA4C89;
-      border-radius: 8px;
-      border-style: none;
-      box-sizing: border-box;
-      color: #FFFFFF;
-      cursor: pointer;
-      display: inline-block;
-      font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      font-weight: 500;
-      height: 40px;
-      line-height: 20px;
-      list-style: none;
-      margin: 0;
-      outline: none;
-      padding: 10px 16px;
-      position: relative;
-      text-align: center;
-      text-decoration: none;
-      transition: color 100ms;
-      vertical-align: baseline;
-      user-select: none;
-      -webkit-user-select: none;
-      touch-action: manipulation;
+        z-index: 1000;
+        background-color: #ffffff00;
+        border-radius: 8px;
+        border-style: solid;
+        border-color: #FFFFFF;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        display: inline-block;
+        font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        height: 40px;
+        line-height: 20px;
+        margin: 0;
+        outline: none;
+        padding: 10px 16px;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 100ms;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+
+        /* Positioning to the top */
+        position: fixed; /* Tetap di posisi atas saat scroll */
+        top: 20px;       /* Jarak dari bagian atas layar */
+        left: 50%;       /* Posisikan di tengah horizontal */
+        transform: translateX(-50%); /* Pusatkan secara horizontal */
     }
 
-    .button-1:hover,
-    .button-1:focus {
-      background-color: #F082AC;
-    }
-  </style>
+</style>
 </head>
 
 <body class="container">
+  <button class="button-1">
+    <a href="lirik.html" style="text-decoration: none; font-size: 14px; color: white;">Klik disini</a>
+  </button>
   <div class="night"></div>
   <div class="flowers">
     <div class="flower flower--1">
@@ -340,9 +344,7 @@
     </div>
   </div>
   <script src="main.js"></script>
-  <button class="button-1">
-    <a href="lirik.html" style="text-decoration: none; font-size: 14px; color: black;">Klik disini</a>
-  </button>
+
 </body>
 
 </html>
