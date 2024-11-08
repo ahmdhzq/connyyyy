@@ -18,7 +18,24 @@ body {
   background-color: var(--dark-color);
   overflow: hidden;
   perspective: 1000px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+/* CSS tambahan untuk responsivitas */
+@media (max-width: 768px) {
+  body {
+      align-items: center; /* Mengubah alignment pada layar kecil */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+      align-items: center; /* Untuk layar sangat kecil, tetap di tengah */
+  }
+}
+
 
 .night {
   position: fixed;
