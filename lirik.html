@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>index</title>
+	<script src="vara.min.js"></script>
+
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+
+		}
+
+		body {
+			background-color: #fc47d5;
+			background-size: cover;
+			background-position: center;
+			height: 100vh;
+			overflow: hidden;
+			color: black;
+
+
+		}
+
+		#container {
+			width: 80%;
+			margin: 20px auto;
+			min-height: 650px;
+			margin-top: 150px;
+			color: black;
+		}
+
+		@media screen and (max-width: 400px) {
+			#container {
+				width: 100%;
+				margin: 50% auto;
+				min-height: 800px;
+			}
+
+		}
+
+		.wrapper {
+			position: fixed;
+		}
+
+		.box div {
+			position: fixed;
+			width: 70px;
+			height: 70px;
+			
+		}
+
+		.box div:nth-child(1) {
+			top: 12%;
+			left: 42%;
+			background-color: transparent;
+			border-radius: 30px;
+			border: 6px solid yellow;
+			animation: animate 10s linear infinite;
+		}
+
+		.box div:nth-child(2) {
+			top: 70%;
+			left: 50%;
+			background-color: transparent;
+			border-radius: 30px;
+			border: 6px solid yellow;
+			animation: animate 7s linear infinite;
+		}
+
+		.box div:nth-child(3) {
+			top: 17%;
+			left: 6%;
+			animation: animate 9s linear infinite;
+		}
+
+		.box div:nth-child(4) {
+			top: 10%;
+			left: 70%;
+			animation: animate 10s linear infinite;
+		}
+
+		.box div:nth-child(5) {
+			top: 67%;
+			left: 15%;
+			animation: animate 9s linear infinite;
+		}
+
+		.box div:nth-child(6) {
+			top: 80%;
+			left: 70%;
+			background-color: transparent;
+			border-radius: 30px;
+			border: 6px solid yellow;
+			animation: animate 12s linear infinite;
+		}
+
+		.box div:nth-child(7) {
+			top: 60%;
+			left: 80%;
+			animation: animate 15s linear infinite;
+		}
+
+		.box div:nth-child(8) {
+			top: 32%;
+			left: 25%;
+			animation: animate 16s linear infinite;
+		}
+
+		.box div:nth-child(9) {
+			top: 85%;
+			left: 55%;
+			animation: animate 9s linear infinite;
+		}
+
+		.box div:nth-child(10) {
+			top: 20%;
+			left: 80%;
+			background-color: transparent;
+			border-radius: 30px;
+			border: 6px solid yellow;
+			animation: animate 8s linear infinite;
+		}
+
+		@keyframes animate {
+			0% {
+				transform: scale(0) translateY(0) rotate(0);
+				opacity: 1;
+			}
+
+			100% {
+				transform: scale(1.2) translateY(-90px) rotate(360deg);
+				opacity: 0;
+			}
+		}
+
+		img {
+			width: 200px;
+			aspect-ratio: 1;
+			object-fit: cover;
+			--_m: radial-gradient(#000 69%, #0000 70%) 84.5%/50%;
+			-webkit-mask-box-image: var(--_m);
+			mask-border: var(--_m);
+			clip-path: polygon(-41% 0, 50% 91%, 141% 0);
+		}
+
+		/* fallback until better support for mask-border */
+		@supports not (-webkit-mask-box-image: var(--_m)) {
+			img {
+				--_m:
+					radial-gradient(at 70% 31%, #000 29%, #0000 30%),
+					radial-gradient(at 30% 31%, #000 29%, #0000 30%),
+					linear-gradient(#000 0 0) bottom/100% 50% no-repeat;
+				-webkit-mask: var(--_m);
+				mask: var(--_m);
+			}
+		}
+	</style>
+</head>
+
+<body>
+
+	<audio autoplay src="music/lagu.mp3" ></audio>
+	<div id="container"></div>
+	<a href="" class="hidden"></a>
+	<div class="wrapper">
+		<div class="box">
+			<div></div>
+			<div></div>
+			<div><img class="heart-img" src="img/cn1.jpg" alt=""></div>
+			<div><img class="heart-img" src="img/cn3.jpg" alt=""></div>
+			<div><img class="heart-img" src="img/cn4.png" alt=""></div>
+			<div></div>
+			<div><img class="heart-img" src="img/cn5.png" alt=""></div>
+			<div><img class="heart-img" src="img/cn6.png" alt=""></div>
+			<div><img class="heart-img" src="img/cn2.jpg" alt=""></div>
+			<div></div>
+		</div>
+	</div>
+
+	<script>
+		var fontSize = 40;
+		if (window.screen.width > 700)
+			fontSize = 55;
+		else if (window.screen.width > 1200)
+			fontSize = 80;
+		var vara = new Vara(
+			"#container",
+			"https://raw.githubusercontent.com/akzhy/Vara/master/fonts/Satisfy/SatisfySL.json",
+			[
+				{
+					text: "Kau datang tak kuduga, beri aku tawa",
+					y: 150,
+					delay: 900,
+					fromCurrentPosition: { y: false },
+					duration: 2400
+				},
+				{
+					text: "Bahagia hariku, kaubuat sempurna",
+					y: 150,
+					fromCurrentPosition: { y: false },
+					delay: 1000,
+					duration: 2400
+				},
+				{
+					text: "Mungkin kita bisa berjalan bersama",
+					y: 150,
+					fromCurrentPosition: { y: false },
+					delay: 1400,
+					duration: 2300
+				},
+				{
+					text: "Tunggu sejenak, ini belum saatnya",
+					y: 150,
+					fromCurrentPosition: { y: false },
+					delay: 1400,
+					duration: 3000
+				},
+				{
+					text: "Ooo...",
+					y: 150,
+					fromCurrentPosition: { y: false },
+					delay: 1250,
+					duration: 1800
+				},
+				{
+					text: "Serasa ku ingin katakan pada dunia, oh-oh",
+					y: 150,
+					fromCurrentPosition: { y: false },
+					delay: 1000,
+					duration: 6500
+				},
+				{
+					text: "Seberapa kuinginkanmu temani hidupku yang dulu kelam",
+					y: 150,
+					fromCurrentPosition: { y: false },
+					delay: 1250,
+					duration: 8000
+				},
+				{
+					text: "Kaujadikan penuh makna",
+					y: 150,
+					fromCurrentPosition: { y: false },
+					delay: 1000,
+					duration: 4000
+				},
+				// Kata kata
+				{
+					text: " ",
+					y: 150,
+					fromCurrentPosition: { y: false },
+					delay: 1000,
+					duration: 1500
+				},
+				{
+					text: "Hehe gimana? suka ngga?",
+					y: 150,
+					fromCurrentPosition: { y: false },
+					delay: 1000,
+					duration: 6500
+				},
+				{
+					text: "Maap kalau masih agak berantakan soalnya gapernah bikin kek giniii wkwk",
+					y: 150,
+					fromCurrentPosition: { y: false },
+					delay: 1250,
+					duration: 8000
+				},
+				{
+					text: "Conny tetap semangat ya kuliahnya, semangat ngerjain proposalnya, kalau ada apa apa cerita ke aku yaaa, jangan diem muluuuu, jadi bingung aku kalo conny tiba tiba cuek trus badmood...",
+					y: 150,
+					fromCurrentPosition: { y: false },
+					delay: 1000,
+					duration: 13000
+				},
+				{
+					text: "Conny jangan berubah ya:)",
+					y: 150,
+					fromCurrentPosition: { y: false },
+					delay: 1000,
+					duration: 5000
+				},
+				{
+					text: "Conny jangan pergiii...:(",
+					y: 150,
+					fromCurrentPosition: { y: false },
+					delay: 1000,
+					duration: 5000
+				},
+				{
+					text: "Aku mau bilang lop yu tapi kok agak kaku wkwk:v",
+					y: 150,
+					fromCurrentPosition: { y: false },
+					delay: 1000,
+					duration: 5000
+				},
+			],
+
+			{
+				strokeWidth: 2,
+				color: "#fff",
+				fontSize: fontSize,
+				textAlign: "center"
+			}
+		);
+		vara.ready(function () {
+			var erase = true;
+			vara.animationEnd(function (i, o) {
+				if (i == "no_erase") erase = false;
+				if (erase) {
+					o.container.style.transition =
+						"opacity 1s 1s";
+					o.container.style.opacity = 0;
+				}
+			});
+		});
+
+	</script>
+</body>
+
+</html>
